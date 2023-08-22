@@ -55,8 +55,6 @@
 							"script": {
 								"id": "52f1bf5a-f5e4-4055-a114-12513f41f820",
 								"exec": [
-									"var responseBody = pm.response.json();",
-									"var firstname = responseBody.firstname;",
 									"pm.collectionVariables.set(\"firstname\", firstname);"
 								],
 								"type": "text/javascript"
@@ -1058,12 +1056,12 @@
 	],
 	"variable": [
 		{
-			"id": "a4e56110-f46c-42c9-852a-c2542c43fba6",
+			"id": "0b1a5b4a-6643-42e4-b4da-802371075d3a",
 			"key": "bookingId",
 			"value": ""
 		},
 		{
-			"id": "838e0448-bb24-4db1-be8e-4c9bb1a5bf26",
+			"id": "02da87dc-2eb5-4bf1-b6ef-eebc7561514b",
 			"key": "firstname",
 			"value": ""
 		}
