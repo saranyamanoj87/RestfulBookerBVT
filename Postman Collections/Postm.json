@@ -1059,19 +1059,24 @@
 	],
 	"variable": [
 		{
-			"id": "7e9c4774-05ab-4296-a58f-a7390c038ad2",
+			"id": "fa6a2d8e-d696-4c19-af7b-6f2ca8b8b13c",
 			"key": "bookingId",
 			"value": ""
 		},
 		{
-			"id": "c8507526-0f0b-4824-b33d-5d5de513daf8",
+			"id": "6f9d2123-15c6-46ab-b8bb-6ecec66d1b0d",
 			"key": "firstname",
 			"value": ""
 		},
 		{
-			"id": "c397c49c-ddcd-46ca-8425-77444b6e1537",
+			"id": "3397256a-641a-4922-a295-26ab0c60740a",
 			"key": "{{book}}",
 			"value": "{{bookingId}}"
+		},
+		{
+			"id": "471520ef-31a5-46d5-a446-f5ef21bccf55",
+			"key": "book",
+			"value": "{{bookingid}}"
 		}
 	]
 }
