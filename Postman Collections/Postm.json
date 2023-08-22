@@ -53,16 +53,17 @@
 						{
 							"listen": "prerequest",
 							"script": {
+								"id": "52f1bf5a-f5e4-4055-a114-12513f41f820",
 								"exec": [
 									""
 								],
-								"type": "text/javascript",
-								"id": "52f1bf5a-f5e4-4055-a114-12513f41f820"
+								"type": "text/javascript"
 							}
 						},
 						{
 							"listen": "test",
 							"script": {
+								"id": "b3c89cbd-f07e-4c2b-84e3-5efe7336525b",
 								"exec": [
 									"// Retrieve the saved \"bookingid\" value from the variable",
 									"pm.test(\"Validate response against saved 'bookingid' value\", function () {",
@@ -84,8 +85,7 @@
 									"});",
 									""
 								],
-								"type": "text/javascript",
-								"id": "b3c89cbd-f07e-4c2b-84e3-5efe7336525b"
+								"type": "text/javascript"
 							}
 						}
 					],
@@ -96,7 +96,21 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": "{{rb_url}}/booking"
+						"url": {
+							"raw": "{{rb_url}}/booking?firstname=Sarah",
+							"host": [
+								"{{rb_url}}"
+							],
+							"path": [
+								"booking"
+							],
+							"query": [
+								{
+									"key": "firstname",
+									"value": "Sarah"
+								}
+							]
+						}
 					},
 					"response": []
 				},
@@ -1042,12 +1056,12 @@
 	],
 	"variable": [
 		{
-			"id": "ddb27843-c1d1-4289-9efd-1f0393c9b3b8",
+			"id": "282c76bc-0ebc-473c-a62b-54192029e435",
 			"key": "bookingId",
 			"value": ""
 		},
 		{
-			"id": "55b29cb6-6e33-4861-b702-f9657c419338",
+			"id": "1a3f32b0-bce7-4295-b5b0-3895f0f213f5",
 			"key": "firstname",
 			"value": ""
 		}
