@@ -23,7 +23,7 @@
 									"    var responseBookingId = responseBody[index].bookingid; // Fixed typo in property name",
 									"    console.log(responseBookingId);",
 									"    pm.globals.set(\"bookinId\", responseBookingId); // Fixed variable name",
-									"    var savedBookingId = pm.globals.get(\"bookingId\");",
+									"    var savedBookingId = pm.globals.get(\"bookinId\");",
 									"    pm.expect(responseBookingId).to.equal(savedBookingId);",
 									"});",
 									"",
@@ -1107,22 +1107,22 @@
 	],
 	"variable": [
 		{
-			"id": "b18e4b13-4d33-49b1-9c4f-09c9acdae868",
+			"id": "0434f864-cc20-4a01-a380-ad9eee76ab6f",
 			"key": "bookingId",
 			"value": ""
 		},
 		{
-			"id": "1aa1dbca-9604-485f-864a-eb3457067667",
+			"id": "bb1a66b0-ec8d-46b2-9bb2-a1f420cbe026",
 			"key": "firstname",
 			"value": ""
 		},
 		{
-			"id": "916dd992-9aa3-41eb-9ef2-e30fe12e7e87",
+			"id": "90af4123-5930-4bd3-b7ed-028a911802c0",
 			"key": "{{book}}",
 			"value": "{{bookingId}}"
 		},
 		{
-			"id": "1bafff25-b2be-43f7-a99d-2b5ddb478da7",
+			"id": "e1cbebab-9ff8-4e13-8bf6-e6bb156be2e7",
 			"key": "book",
 			"value": "{{bookingid}}"
 		}
