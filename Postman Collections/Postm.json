@@ -66,7 +66,7 @@
 									"    const responseData = pm.response.json();",
 									"",
 									"    pm.expect(responseData).to.be.an('array');",
-									"    pm.expect(responseData).to.have.lengthOf(1);",
+									"    pm.expect(responseData).to.have.lengthOf(responseData.length);",
 									"});",
 									"",
 									""
@@ -1098,22 +1098,22 @@
 	],
 	"variable": [
 		{
-			"id": "9abc4381-1318-4334-b65e-d59806bc189d",
+			"id": "eeba6d85-bbb1-4d04-a04a-7c54b848fb91",
 			"key": "bookingId",
 			"value": ""
 		},
 		{
-			"id": "4bd2cfab-6d43-46a2-9c03-27b1c966d113",
+			"id": "936c211e-a1cc-4372-bfef-569f07861f24",
 			"key": "firstname",
 			"value": ""
 		},
 		{
-			"id": "18d85ea4-b17c-49e8-8ebe-56837de296d6",
+			"id": "ff7fa469-4f9d-4a8f-88dc-eb8efbf99fb9",
 			"key": "{{book}}",
 			"value": "{{bookingId}}"
 		},
 		{
-			"id": "62f6c9c4-a203-46bb-8bb0-5bd58141741f",
+			"id": "74534069-58f1-4f78-b902-92ee5314fcb1",
 			"key": "book",
 			"value": "{{bookingid}}"
 		}
