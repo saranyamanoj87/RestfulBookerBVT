@@ -25,7 +25,7 @@
 									"",
 									"    var responseBody = pm.response.json();",
 									"    var responseBookingId = responseBody[3].bookingid;",
-									"//.console.log(responseBookingId);",
+									"console.log(responseBookingId);",
 									"//pm.globals.set(\"bookingId\", responseBookingId);",
 									"pm.collectionVariables.set(\"bookingId\", responseBookingId);",
 									"var savedBookingId = pm.collectionVariables.get(\"bookingId\");",
@@ -1042,12 +1042,12 @@
 	],
 	"variable": [
 		{
-			"id": "45dd9931-1716-48f5-9697-a9605429f8a6",
+			"id": "33aa02f2-93bf-49f2-8374-068468298557",
 			"key": "bookingId",
 			"value": ""
 		},
 		{
-			"id": "4812f026-4eb0-4739-bdb1-7e17caaa298e",
+			"id": "8b7296c7-181e-4328-b044-0b382fe0fbee",
 			"key": "firstname",
 			"value": ""
 		}
