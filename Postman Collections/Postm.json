@@ -390,16 +390,17 @@
 						{
 							"listen": "prerequest",
 							"script": {
+								"id": "eb370b37-3e96-4796-8118-9b5093a4e565",
 								"exec": [
 									""
 								],
-								"type": "text/javascript",
-								"id": "eb370b37-3e96-4796-8118-9b5093a4e565"
+								"type": "text/javascript"
 							}
 						},
 						{
 							"listen": "test",
 							"script": {
+								"id": "7901d5e4-623e-438b-90be-58005eda16d1",
 								"exec": [
 									"// Stores the firstname from the response in an environment or global variable",
 									"var responseBody = pm.response.json();",
@@ -409,8 +410,7 @@
 									"",
 									""
 								],
-								"type": "text/javascript",
-								"id": "7901d5e4-623e-438b-90be-58005eda16d1"
+								"type": "text/javascript"
 							}
 						}
 					],
@@ -421,7 +421,7 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": "{{rb_url}}/booking/{{bookingId}}"
+						"url": "{{rb_url}}/booking/{{{{book}}}}"
 					},
 					"response": []
 				},
@@ -1059,17 +1059,17 @@
 	],
 	"variable": [
 		{
-			"id": "0991652b-9fff-4451-9f44-71e446ad66c3",
+			"id": "77b3f637-34c9-46e7-a0af-c60ea6ffd844",
 			"key": "bookingId",
 			"value": ""
 		},
 		{
-			"id": "3757e546-316a-4bb1-a0f2-a56c61772db0",
+			"id": "ffbefa7c-d770-42d3-a5ba-1556df636bba",
 			"key": "firstname",
 			"value": ""
 		},
 		{
-			"id": "329dfa82-f91a-4d0d-8e3d-5ae9840ed9bc",
+			"id": "f376596a-b358-42b1-ad6b-c7b1a859faef",
 			"key": "{{book}}",
 			"value": "{{bookingId}}"
 		}
