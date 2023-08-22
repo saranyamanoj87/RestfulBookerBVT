@@ -421,7 +421,7 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": "{{rb_url}}/booking/{{{{book}}}}"
+						"url": "{{rb_url}}/booking/{{book}}"
 					},
 					"response": []
 				},
@@ -1059,17 +1059,17 @@
 	],
 	"variable": [
 		{
-			"id": "77b3f637-34c9-46e7-a0af-c60ea6ffd844",
+			"id": "7e9c4774-05ab-4296-a58f-a7390c038ad2",
 			"key": "bookingId",
 			"value": ""
 		},
 		{
-			"id": "ffbefa7c-d770-42d3-a5ba-1556df636bba",
+			"id": "c8507526-0f0b-4824-b33d-5d5de513daf8",
 			"key": "firstname",
 			"value": ""
 		},
 		{
-			"id": "f376596a-b358-42b1-ad6b-c7b1a859faef",
+			"id": "c397c49c-ddcd-46ca-8425-77444b6e1537",
 			"key": "{{book}}",
 			"value": "{{bookingId}}"
 		}
