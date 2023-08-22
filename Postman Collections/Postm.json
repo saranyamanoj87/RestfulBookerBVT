@@ -449,11 +449,38 @@
 							"script": {
 								"id": "7901d5e4-623e-438b-90be-58005eda16d1",
 								"exec": [
-									"// Stores the firstname from the response in an environment or global variable",
+									"// Stores the firstname from the response in global variable",
 									"var responseBody = pm.response.json();",
 									"var firstname = responseBody.firstname;",
-									"pm.collectionVariables.set(\"firstname\", firstname);",
-									"//pm.globals.set(\"firstname\", firstname);",
+									"pm.globals.set(\"firstName\", firstname);",
+									"",
+									"",
+									"",
+									"pm.test(\"Response status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"",
+									"pm.test(\"Firstname is a non-empty string\", function () {",
+									"    const responseData = pm.response.json();",
+									"",
+									"    pm.expect(responseData.firstname).to.be.a('string').and.to.have.lengthOf.at.least(1, \"Value should not be empty\");",
+									"});",
+									"",
+									"",
+									"pm.test(\"Total price is a non-negative number\", function () {",
+									"    const responseData = pm.response.json();",
+									"",
+									"    pm.expect(responseData).to.be.an('object');",
+									"    pm.expect(responseData.totalprice).to.be.a('number').and.to.be.at.least(0);",
+									"});",
+									"",
+									"",
+									"pm.test(\"Depositpaid is a boolean value\", function () {",
+									"    const responseData = pm.response.json();",
+									"",
+									"    pm.expect(responseData.depositpaid).to.be.a('boolean');",
+									"});",
 									"",
 									""
 								],
@@ -468,7 +495,7 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": "{{rb_url}}/booking/{{bookingId}}"
+						"url": "{{rb_url}}/booking/{{bookinId}}"
 					},
 					"response": []
 				},
@@ -1106,22 +1133,22 @@
 	],
 	"variable": [
 		{
-			"id": "6eaa4a04-87f5-45b5-99db-d0bdb3ad5863",
+			"id": "caff3fba-8e30-4134-be82-6e5634f4b115",
 			"key": "bookingId",
 			"value": ""
 		},
 		{
-			"id": "5e233204-90d2-4f1a-8dfb-2fb5adfa9e22",
+			"id": "05beb4ea-06ce-4fbe-89b8-c98e08ef18e3",
 			"key": "firstname",
 			"value": ""
 		},
 		{
-			"id": "c50dcda6-8cd0-45bb-8f3c-9c19e5d66908",
+			"id": "58c65987-162e-4631-b35a-089654831de1",
 			"key": "{{book}}",
 			"value": "{{bookingId}}"
 		},
 		{
-			"id": "c99cfe4c-b6ff-4dea-8dd7-4f087f1e4dba",
+			"id": "ec8c18da-7fb8-4466-b0b7-98abde4ba12b",
 			"key": "book",
 			"value": "{{bookingid}}"
 		}
