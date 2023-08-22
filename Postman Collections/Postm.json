@@ -169,21 +169,21 @@
 						{
 							"listen": "prerequest",
 							"script": {
+								"id": "e7ca3325-b577-470e-b1a3-6bf2f63d8565",
 								"exec": [
 									""
 								],
-								"type": "text/javascript",
-								"id": "e7ca3325-b577-470e-b1a3-6bf2f63d8565"
+								"type": "text/javascript"
 							}
 						},
 						{
 							"listen": "test",
 							"script": {
+								"id": "2e14ee3c-4c00-4867-bfc7-24ff41286200",
 								"exec": [
 									""
 								],
-								"type": "text/javascript",
-								"id": "2e14ee3c-4c00-4867-bfc7-24ff41286200"
+								"type": "text/javascript"
 							}
 						}
 					],
@@ -195,7 +195,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{rb_url}}/booking?firstname=Sarah&lastname=Anderson",
+							"raw": "{{rb_url}}/booking?firstname=Susan&lastname=Jones",
 							"host": [
 								"{{rb_url}}"
 							],
@@ -205,11 +205,11 @@
 							"query": [
 								{
 									"key": "firstname",
-									"value": "Sarah"
+									"value": "Susan"
 								},
 								{
 									"key": "lastname",
-									"value": "Anderson"
+									"value": "Jones"
 								}
 							]
 						}
@@ -1056,12 +1056,12 @@
 	],
 	"variable": [
 		{
-			"id": "d5b0650a-37eb-412b-b85a-c3cb00220dd6",
+			"id": "1f30ee49-4601-469c-8696-a1b4a80225f0",
 			"key": "bookingId",
 			"value": ""
 		},
 		{
-			"id": "b997c74c-2594-461c-9f61-299b0ac703b8",
+			"id": "68dad8cd-3ebe-410a-8a0c-ad2bcd13d56e",
 			"key": "firstname",
 			"value": ""
 		}
