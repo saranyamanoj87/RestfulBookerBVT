@@ -16,6 +16,19 @@
 							"script": {
 								"id": "f3732062-a110-4081-8880-4bb963bf403f",
 								"exec": [
+									"// Retrieve the saved \"bookingId\" value from the variable",
+									"pm.test(\"Validate response against saved 'bookingId' value\", function () {",
+									"    ",
+									"    // Alternatively, you can use pm.environment.get(\"bookingId\") if it was stored on an environment",
+									"",
+									"    var responseBody = pm.response.json();",
+									"    var responseBookingId = responseBody[1].bookingid;",
+									"console.log(responseBookingId);",
+									"pm.globals.set(\"bookinId\", responseBookingId);",
+									"//pm.collectionVariables.set(\"bookingId\", responseBookingId);",
+									"var savedBookingId = pm.globals.get(\"bookinId\");",
+									"    pm.expect(responseBookingId).to.equal(savedBookingId);",
+									"});",
 									""
 								],
 								"type": "text/javascript"
@@ -1045,22 +1058,22 @@
 	],
 	"variable": [
 		{
-			"id": "bf99161a-6378-4191-9472-afbf82754fd9",
+			"id": "842b3e9c-cc5e-4b8d-9839-75a4492fc958",
 			"key": "bookingId",
 			"value": ""
 		},
 		{
-			"id": "387d65bb-c240-408d-8ef2-0e62515febce",
+			"id": "383f006c-6971-4a0c-b4d0-3832b4d84f8d",
 			"key": "firstname",
 			"value": ""
 		},
 		{
-			"id": "04f11047-a2cf-4d7d-a818-bc78c4044d51",
+			"id": "5c8f5fa1-2229-4146-8333-0838d0a8037c",
 			"key": "{{book}}",
 			"value": "{{bookingId}}"
 		},
 		{
-			"id": "25affdfe-cc3d-42b1-91fb-7df1b1c63da2",
+			"id": "98b6d0a1-d71f-4774-81cb-6872f3bc4b31",
 			"key": "book",
 			"value": "{{bookingid}}"
 		}
