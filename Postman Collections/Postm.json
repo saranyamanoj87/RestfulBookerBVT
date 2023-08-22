@@ -103,8 +103,7 @@
 								"id": "52f1bf5a-f5e4-4055-a114-12513f41f820",
 								"exec": [
 									"",
-									"var firstname ;",
-									"pm.collectionVariables.set(\"firstname\", firstname);",
+									"",
 									""
 								],
 								"type": "text/javascript"
@@ -117,22 +116,60 @@
 								"exec": [
 									"// Retrieve the saved \"bookingid\" value from the variable",
 									"pm.test(\"Validate response against saved 'bookingid' value\", function () {",
-									"    var savedBookingId = pm.collectionVariables.get(\"bookingId\");",
-									"    // Alternatively, you can use pm.environment.get(\"bookingId\") if it was stored on an environment",
+									"    var savedBookingId = pm.globals.get(\"bookinId\");",
+									"",
 									"",
 									"    var responseBody = pm.response.json();",
 									"    var responseBookingId;",
 									"    for (var i = 0; i < responseBody.length; i++) {",
 									"        responseBookingId = responseBody[i].bookingid;",
 									"        console.log(\"Booking ID:\", responseBookingId);",
-									"        if(responseBookingId==savedBookingId){",
-									"          console.log(\"responseBookingId isequalto savedBookingId\");  ",
-									"          break;",
+									"        if (responseBookingId == savedBookingId) {",
+									"            console.log(\"responseBookingId isequalto savedBookingId\");",
+									"            break;",
 									"        }",
 									"        ;",
 									"    }",
-									" ",
+									"",
 									"});",
+									"",
+									"",
+									"",
+									"",
+									"pm.test(\"Response status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"",
+									"pm.test(\"Response is an array\", function () {",
+									"    const responseData = pm.response.json();",
+									"",
+									"    pm.expect(responseData).to.be.an('array');",
+									"});",
+									"",
+									"",
+									"pm.test(\"Each object in the array has a bookingid field\", function () {",
+									"    const responseData = pm.response.json();",
+									"",
+									"    pm.expect(responseData).to.be.an('array');",
+									"",
+									"    responseData.forEach(function (booking) {",
+									"        pm.expect(booking).to.have.property('bookingid');",
+									"    });",
+									"});",
+									"",
+									"",
+									"pm.test(\"bookingid field is a non-negative integer\", function () {",
+									"    const responseData = pm.response.json();",
+									"",
+									"    pm.expect(responseData).to.be.an('array');",
+									"",
+									"    responseData.forEach(function (booking) {",
+									"        pm.expect(booking.bookingid).to.be.a('number').and.to.satisfy((id) => id >= 0, \"bookingid should be a non-negative integer\");",
+									"    });",
+									"});",
+									"",
+									"",
 									""
 								],
 								"type": "text/javascript"
@@ -147,7 +184,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{rb_url}}/booking?firstname={{firstname}}",
+							"raw": "{{rb_url}}/booking?firstname={{firstName}}",
 							"host": [
 								"{{rb_url}}"
 							],
@@ -157,7 +194,7 @@
 							"query": [
 								{
 									"key": "firstname",
-									"value": "{{firstname}}"
+									"value": "{{firstName}}"
 								}
 							]
 						}
@@ -1133,24 +1170,24 @@
 	],
 	"variable": [
 		{
-			"id": "8f22b9c5-ad1e-41d4-927a-d97b75e222cf",
+			"id": "193bbc60-9432-483d-8744-e7b026c747e2",
 			"key": "bookingId",
 			"value": ""
 		},
 		{
-			"id": "6a6ec434-0a74-4c1f-8ec1-9e58f440a2fc",
+			"id": "94c9991f-2399-45d6-9b71-dacd46bb8630",
 			"key": "firstname",
 			"value": ""
 		},
 		{
-			"id": "1d2d0761-149c-442a-8952-a1acff95b7ba",
-			"key": "{{book}}",
-			"value": "{{bookingId}}"
+			"id": "77e3f71f-de29-4c4c-8eae-f7c384077455",
+			"key": "firtsnam",
+			"value": ""
 		},
 		{
-			"id": "2eb672aa-3e6b-4e3f-be2d-ace0cff7c229",
-			"key": "book",
-			"value": "{{bookingid}}"
+			"id": "87182b13-da31-46fa-a94f-4a8bb6881ca3",
+			"key": "booking_id",
+			"value": ""
 		}
 	]
 }
