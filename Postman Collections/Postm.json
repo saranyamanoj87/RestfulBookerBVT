@@ -79,7 +79,7 @@
 							"script": {
 								"id": "c1ada496-3d26-4534-b0b2-8d8fd3088475",
 								"exec": [
-									"pm.globals.set('responseBodyindex'),{{pm.variables.replaceIn()}}"
+									"pm.globals.set('responseBodyindex',pm.variables.replaceIn('{{$randomInt}}'));"
 								],
 								"type": "text/javascript"
 							}
@@ -1108,22 +1108,22 @@
 	],
 	"variable": [
 		{
-			"id": "098a246e-14ae-42f7-8b3d-414998a9b318",
+			"id": "399ebc32-736e-4eca-84e3-ed4cdcc6c5cf",
 			"key": "bookingId",
 			"value": ""
 		},
 		{
-			"id": "bdd9735a-7000-485b-bd98-642fc1ccd379",
+			"id": "1d043ce4-fa85-46dc-8e4c-471e03864e7a",
 			"key": "firstname",
 			"value": ""
 		},
 		{
-			"id": "c507f273-a0cd-4e97-be6c-b435073cc34e",
+			"id": "4602a02f-012a-4b31-9c00-9df1625d7f58",
 			"key": "{{book}}",
 			"value": "{{bookingId}}"
 		},
 		{
-			"id": "f2d3b4b5-b44a-46f0-8228-87d67e7a7f55",
+			"id": "f641e872-acb6-4acb-80c9-0d08dd72b33e",
 			"key": "book",
 			"value": "{{bookingid}}"
 		}
