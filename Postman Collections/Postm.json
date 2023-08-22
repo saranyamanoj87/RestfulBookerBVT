@@ -20,10 +20,10 @@
 									"pm.test(\"Validate response against saved 'bookingId' value\", function () {",
 									"    var responseBody = pm.response.json();",
 									"    var index = pm.globals.get(\"responseBodyindex\");",
-									"    var responseBookingId = responseBody[index].bookinId;",
+									"    var responseBookingId = responseBody[index].bookingid; // Fixed typo in property name",
 									"    console.log(responseBookingId);",
-									"    pm.globals.set(\"bookinId\", responseBookingId);",
-									"    var savedBookingId = pm.globals.get(\"bookinId\");",
+									"    pm.globals.set(\"bookingId\", responseBookingId); // Fixed variable name",
+									"    var savedBookingId = pm.globals.get(\"bookingId\");",
 									"    pm.expect(responseBookingId).to.equal(savedBookingId);",
 									"});",
 									"",
@@ -68,9 +68,7 @@
 									"",
 									"    pm.expect(responseData).to.be.an('array');",
 									"    pm.expect(responseData).to.have.lengthOf(responseData.length);",
-									"});",
-									"",
-									""
+									"});"
 								],
 								"type": "text/javascript"
 							}
@@ -1109,22 +1107,22 @@
 	],
 	"variable": [
 		{
-			"id": "8c825356-fadb-4539-b15c-10b8dfd51ee4",
+			"id": "b2a7781a-425d-4880-8edb-05ae69574160",
 			"key": "bookingId",
 			"value": ""
 		},
 		{
-			"id": "f107f389-e1d7-4765-a155-7fd361ca05a6",
+			"id": "156e07de-bf5c-4b08-b2c4-841d1e8d7ce9",
 			"key": "firstname",
 			"value": ""
 		},
 		{
-			"id": "89537463-a8a7-4555-aa2d-d490d883796b",
+			"id": "33e32a58-e219-4be6-9129-7d15dfd65c81",
 			"key": "{{book}}",
 			"value": "{{bookingId}}"
 		},
 		{
-			"id": "7e205bca-a071-4669-8be0-62a6fe8c8bac",
+			"id": "7f9ff758-f2ae-4f32-a35f-d09c1ada52d7",
 			"key": "book",
 			"value": "{{bookingid}}"
 		}
