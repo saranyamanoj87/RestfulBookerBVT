@@ -97,7 +97,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{rb_url}}/booking?firstname=Susan",
+							"raw": "{{rb_url}}/booking?firstname={{firstname}}",
 							"host": [
 								"{{rb_url}}"
 							],
@@ -107,7 +107,7 @@
 							"query": [
 								{
 									"key": "firstname",
-									"value": "Susan"
+									"value": "{{firstname}}"
 								}
 							]
 						}
@@ -1056,12 +1056,12 @@
 	],
 	"variable": [
 		{
-			"id": "303a271d-b8b8-427a-a22c-ebf9eee37b9a",
+			"id": "c21b3f93-730b-4f9b-89d3-f89ee32f1bb9",
 			"key": "bookingId",
 			"value": ""
 		},
 		{
-			"id": "699dd7c2-4224-4ec5-bb94-3ebe59bb5974",
+			"id": "78811f39-e00f-4174-b84f-317b4aea8d3e",
 			"key": "firstname",
 			"value": ""
 		}
