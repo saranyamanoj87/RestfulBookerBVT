@@ -24,7 +24,7 @@
 									"    // Alternatively, you can use pm.environment.get(\"bookingId\") if it was stored on an environment",
 									"",
 									"    var responseBody = pm.response.json();",
-									"    var responseBookingId = responseBody[0].bookingid;",
+									"    var responseBookingId = responseBody[1].bookingid;",
 									"console.log(responseBookingId);",
 									"//pm.globals.set(\"bookingId\", responseBookingId);",
 									"pm.collectionVariables.set(\"bookingId\", responseBookingId);",
@@ -1059,22 +1059,22 @@
 	],
 	"variable": [
 		{
-			"id": "87a809dd-9f41-4697-a980-492d34c879c8",
+			"id": "3c979b9c-d5f5-4f49-ab36-c4b46fbd6207",
 			"key": "bookingId",
 			"value": ""
 		},
 		{
-			"id": "1ec1465a-0c1f-4bf9-b8ca-4f2d042253c2",
+			"id": "9f57c9f1-7c14-4c19-8aae-738b901db4f0",
 			"key": "firstname",
 			"value": ""
 		},
 		{
-			"id": "e4a40a22-0749-49ae-b23c-829badd211a4",
+			"id": "f36994f7-bfb0-4c82-8cf4-c01c263adf18",
 			"key": "{{book}}",
 			"value": "{{bookingId}}"
 		},
 		{
-			"id": "7e85bd86-3a99-4baa-80d8-3337b90cc740",
+			"id": "1ac42645-0b78-4842-a9ed-d45946730291",
 			"key": "book",
 			"value": "{{bookingid}}"
 		}
