@@ -20,7 +20,7 @@
 									"pm.test(\"Validate response against saved 'bookingId' value\", function () {",
 									"    var responseBody = pm.response.json();",
 									"    var responseBookingId = responseBody[pm.globals.get(\"responseBodyindex\")].bookingid; ",
-									"    console.log(responseBookingId);",
+									"    //console.log(responseBookingId);",
 									"    pm.globals.set(\"bookinId\", responseBookingId); // Fixed variable name",
 									"    var savedBookingId = pm.globals.get(\"bookinId\");",
 									"    pm.expect(responseBookingId).to.equal(savedBookingId);",
